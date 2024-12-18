@@ -1,0 +1,363 @@
+<html><head><base href="." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias Gourmet | Sua Experiência Gastronômica</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+      :root {
+        --primary: #ff6b6b;
+        --secondary: #4a4a4a;
+        --light: #f9f9f9;
+      }
+    
+      body {
+        background: var(--light);
+      }
+    
+      .navbar {
+        background: white;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+    
+      .navbar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+    
+      .nav-links a {
+        text-decoration: none;
+        color: var(--secondary);
+        margin-left: 2rem;
+        transition: color 0.3s;
+      }
+    
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+    
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+    
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+    
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+    
+      .cta-button {
+        padding: 1rem 2rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: transform 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+    
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+    
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-content">
+          <div class="logo">Delícias Gourmet</div>
+        </div>
+      </nav>
+    
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Experiência Gastronômica Única</h1>
+          <p>Descubra sabores extraordinários em um ambiente acolhedor</p>
+          <a href="recipes.html" class="cta-button">Receitas</a>
+        </div>
+      </section>
+    
+      <script>
+        const recipesContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Receitas - Delícias Gourmet</title>
+            <style>
+                body {
+                    font-family: 'Poppins', sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background: #f9f9f9;
+                }
+                .recipe-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 20px;
+                    padding: 20px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .recipe-card {
+                    background: white;
+                    border-radius: 10px;
+                    padding: 20px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;
+                }
+                .recipe-card:hover {
+                    transform: translateY(-5px);
+                }
+                .recipe-image {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+                h1 {
+                    text-align: center;
+                    color: #ff6b6b;
+                    margin: 40px 0;
+                }
+                .recipe-instructions {
+                    margin-top: 15px;
+                    color: #666;
+                }
+                .back-button {
+                    display: block;
+                    width: fit-content;
+                    margin: 20px auto;
+                    padding: 10px 20px;
+                    background: #ff6b6b;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: transform 0.3s;
+                    cursor: pointer;
+                }
+                .back-button:hover {
+                    transform: scale(1.05);
+                }
+            </style>
+        </head>
+        <body>
+            <button onclick="window.history.back()" class="back-button">Voltar para Página Inicial</button>
+            <h1>Nossas Receitas</h1>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Risotto" class="recipe-image">
+                    <h2>Risotto de Funghi</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - 2 xícaras de arroz arbóreo<br>
+                        - 200g de cogumelos variados<br>
+                        - 1 cebola<br>
+                        - 2 dentes de alho<br>
+                        - Vinho branco<br>
+                        - Caldo de legumes<br>
+                        - Parmesão ralado
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288" alt="Salmão" class="recipe-image">
+                    <h2>Salmão Grelhado</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Filé de salmão<br>
+                        - Azeite de oliva<br>
+                        - Limão<br>
+                        - Ervas frescas<br>
+                        - Sal e pimenta
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a" alt="Tiramisu" class="recipe-image">
+                    <h2>Tiramisù Clássico</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Café forte<br>
+                        - Biscoitos ladyfingers<br>
+                        - Queijo mascarpone<br>
+                        - Ovos<br>
+                        - Cacau em pó
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="Massa" class="recipe-image">
+                    <h2>Fettuccine Alfredo</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Massa fettuccine<br>
+                        - Creme de leite fresco<br>
+                        - Manteiga<br>
+                        - Queijo parmesão<br>
+                        - Noz-moscada
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19" alt="Ravioli" class="recipe-image">
+                    <h2>Ravioli de Ricota</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Massa para ravioli<br>
+                        - Ricota<br>
+                        - Espinafre<br>
+                        - Molho de tomate<br>
+                        - Manjericão
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Bolo" class="recipe-image">
+                    <h2>Bolo de Chocolate</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Farinha de trigo<br>
+                        - Chocolate em pó<br>
+                        - Ovos<br>
+                        - Açúcar<br>
+                        - Leite
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2" alt="Frango" class="recipe-image">
+                    <h2>Frango ao Curry</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Peito de frango<br>
+                        - Curry em pó<br>
+                        - Leite de coco<br>
+                        - Cebola e alho<br>
+                        - Arroz basmati
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza" class="recipe-image">
+                    <h2>Pizza Margherita</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Massa de pizza<br>
+                        - Molho de tomate<br>
+                        - Mozzarella<br>
+                        - Manjericão<br>
+                        - Azeite
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94" alt="Camarão" class="recipe-image">
+                    <h2>Camarão na Moranga</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Camarões<br>
+                        - Abóbora moranga<br>
+                        - Requeijão<br>
+                        - Creme de leite<br>
+                        - Temperos
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Brigadeiro" class="recipe-image">
+                    <h2>Brigadeiro Gourmet</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Leite condensado<br>
+                        - Chocolate 70% cacau<br>
+                        - Manteiga<br>
+                        - Chocolate granulado<br>
+                        - Cacau em pó
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1548869206-93b036288d7e" alt="Lasanha" class="recipe-image">
+                    <h2>Lasanha à Bolonhesa</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Massa de lasanha<br>
+                        - Carne moída<br>
+                        - Molho de tomate<br>
+                        - Queijo mussarela<br>
+                        - Molho bechamel
+                    </p>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b" alt="Sushi" class="recipe-image">
+                    <h2>Sushi Roll Especial</h2>
+                    <p class="recipe-instructions">
+                        Ingredientes:<br>
+                        - Arroz japonês<br>
+                        - Salmão fresco<br>
+                        - Alga nori<br>
+                        - Cream cheese<br>
+                        - Pepino
+                    </p>
+                </div>
+            </div>
+        </body>
+        </html>
+        `;
+    
+        const receitasLinks = document.querySelectorAll('a[href="recipes.html"]');
+        receitasLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            history.pushState(null, '', window.location.href);
+            const blob = new Blob([recipesContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            window.location.href = url;
+          });
+        });
+    
+        window.addEventListener('popstate', function(e) {
+          if (document.querySelector('.recipe-grid')) {
+            window.location.href = 'index.html';
+          }
+        });
+      </script>
+    </body>
+    </html>
